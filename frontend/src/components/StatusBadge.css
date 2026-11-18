@@ -1,0 +1,63 @@
+
+/* =========================================
+   PHARMACARE - STATUS BADGE
+========================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+/* Normal / Active */
+.status-badge.normal,
+.status-badge.active,
+.status-badge.completed,
+.status-badge.paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* Low stock / Pending */
+.status-badge.low_stock,
+.status-badge.low,
+.status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Expiring soon / Warning */
+.status-badge.expiring_soon,
+.status-badge.warning {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+/* Expired / Inactive */
+.status-badge.expired,
+.status-badge.inactive,
+.status-badge.cancelled,
+.status-badge.failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Out of stock */
+.status-badge.out_of_stock {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+/* Unknown status */
+.status-badge.unknown {
+  background: #f1f5f9;
+  color: #475569;
+}

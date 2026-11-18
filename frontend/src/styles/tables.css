@@ -1,0 +1,224 @@
+/* =========================================
+   PHARMACARE - REUSABLE TABLES
+========================================= */
+
+.table-wrapper,
+.reports-table-wrap,
+.find-medicine-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  scrollbar-width: thin;
+}
+
+.data-table,
+.find-medicine-table,
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td,
+.find-medicine-table th,
+.find-medicine-table td,
+.reports-table th,
+.reports-table td {
+  padding: 13px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.data-table th,
+.find-medicine-table th,
+.reports-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.data-table td,
+.find-medicine-table td,
+.reports-table td {
+  color: #334155;
+}
+
+.data-table tbody tr:hover,
+.find-medicine-table tbody tr:hover,
+.reports-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.data-table tbody tr:last-child td,
+.find-medicine-table tbody tr:last-child td,
+.reports-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-empty {
+  padding: 35px !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+}
+
+.table-secondary-text {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.table-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.table-flag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.table-flag.expired {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.table-flag.expiring {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.status-badge.normal {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.low_stock {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.out_of_stock {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.expired {
+  background: #fecaca;
+  color: #7f1d1d;
+}
+
+.status-badge.expiring_soon {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+@media (max-width: 600px) {
+  .data-table th,
+  .data-table td,
+  .find-medicine-table th,
+  .find-medicine-table td,
+  .reports-table th,
+  .reports-table td {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   PHARMACARE - REUSABLE TABLE COMPONENT
+========================================= */
+
+/* Table wrapper */
+.table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Main table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  text-align: left;
+}
+
+/* Table header */
+.data-table thead th {
+  padding: 15px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Table body */
+.data-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  vertical-align: middle;
+}
+
+/* Last row */
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover effect */
+.data-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* Empty table message */
+.data-table .table-empty {
+  padding: 35px 16px;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+  background: #ffffff;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .table-wrapper {
+    border-radius: 6px;
+  }
+
+  .data-table {
+    min-width: 650px;
+  }
+
+  .data-table thead th {
+    padding: 12px;
+  }
+
+  .data-table tbody td {
+    padding: 12px;
+  }
+}

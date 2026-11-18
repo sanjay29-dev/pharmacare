@@ -1,0 +1,359 @@
+
+/* =========================================
+   PHARMACARE - FIND MEDICINE
+========================================= */
+
+/* Main page */
+
+.find-medicine-page {
+  width: 100%;
+  min-width: 0;
+  color: #172b4d;
+}
+
+/* Page heading */
+
+.find-medicine-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.find-medicine-header h1 {
+  margin: 0 0 9px;
+  color: #172b4d;
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.find-medicine-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* New Sale button */
+
+.find-cart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.find-cart-button:hover {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* Search form */
+
+.medicine-search-form {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 22px;
+}
+
+.medicine-search-form input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #172b4d;
+  font-size: 13px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medicine-search-form input::placeholder {
+  color: #94a3b8;
+}
+
+.medicine-search-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.medicine-search-form button {
+  min-width: 100px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.medicine-search-form button:hover {
+  background: #1d4ed8;
+}
+
+.medicine-search-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error message */
+
+.find-medicine-error {
+  margin: 0 0 18px;
+  padding: 13px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Search results section */
+
+.find-medicine-results {
+  width: 100%;
+  min-width: 0;
+}
+
+.find-medicine-results h2 {
+  margin: 0 0 18px;
+  color: #172b4d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.find-medicine-message {
+  margin: 0;
+  padding: 24px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Results table container */
+
+.find-medicine-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* Results table */
+
+.find-medicine-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.find-medicine-table thead {
+  background: #f8fafc;
+}
+
+.find-medicine-table th {
+  padding: 15px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.find-medicine-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.find-medicine-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.find-medicine-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.find-medicine-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.find-medicine-table td strong {
+  display: block;
+  color: #172b4d;
+  font-weight: 700;
+}
+
+/* Barcode */
+
+.medicine-barcode {
+  display: block;
+  margin-top: 5px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+/* Stock status */
+
+.medicine-stock-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.medicine-stock-status.normal,
+.medicine-stock-status.in_stock {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.medicine-stock-status.low_stock,
+.medicine-stock-status.low {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.medicine-stock-status.out_of_stock {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.medicine-stock-status.unknown {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* Expiry warnings */
+
+.medicine-warning {
+  display: block;
+  margin-top: 5px;
+  color: #b45309;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Add to Sale button */
+
+.add-sale-button {
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid #2563eb;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-sale-button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.add-sale-button:disabled {
+  border-color: #e2e8f0;
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .find-medicine-header h1 {
+    font-size: 25px;
+  }
+
+  .find-medicine-results h2 {
+    font-size: 18px;
+  }
+
+  .find-medicine-table th,
+  .find-medicine-table td {
+    padding: 12px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .find-medicine-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .find-medicine-header h1 {
+    font-size: 23px;
+  }
+
+  .find-cart-button {
+    align-self: flex-start;
+  }
+
+  .medicine-search-form {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .medicine-search-form input,
+  .medicine-search-form button {
+    width: 100%;
+  }
+
+  .find-medicine-message {
+    padding: 20px 12px;
+  }
+
+  .find-medicine-table {
+    min-width: 850px;
+  }
+}

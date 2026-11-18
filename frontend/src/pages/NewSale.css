@@ -1,0 +1,785 @@
+
+/* =========================================
+   PHARMACARE - NEW SALE
+========================================= */
+
+.ns-page {
+  width: 100%;
+  max-width: 1800px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 8px 0;
+  color: #172b4d;
+  box-sizing: border-box;
+}
+
+.ns-page *,
+.ns-page *::before,
+.ns-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.ns-page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.ns-breadcrumb {
+  margin-bottom: 13px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.ns-page-heading h1 {
+  margin: 0 0 8px;
+  color: #172b4d;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.ns-page-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.ns-primary-button,
+.ns-secondary-button,
+.ns-add-button,
+.ns-clear-button,
+.ns-remove-button,
+.ns-complete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ns-primary-button {
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.ns-primary-button:hover {
+  background: #1d4ed8;
+}
+
+.ns-secondary-button {
+  min-height: 42px;
+  padding: 9px 17px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.ns-secondary-button:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.ns-clear-button {
+  min-height: 35px;
+  padding: 7px 12px;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+.ns-clear-button:hover {
+  background: #fee2e2;
+}
+
+.ns-add-button {
+  min-height: 36px;
+  padding: 7px 14px;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.ns-add-button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.ns-remove-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 17px;
+}
+
+.ns-remove-button:hover {
+  background: #fee2e2;
+}
+
+.ns-primary-button:disabled,
+.ns-add-button:disabled,
+.ns-complete-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   ALERTS
+========================================= */
+
+.ns-alert {
+  margin-bottom: 16px;
+  padding: 13px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ns-alert-error {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.ns-alert-success {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* =========================================
+   SEARCH MEDICINES CARD
+========================================= */
+
+.ns-search-card {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.ns-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ns-section-heading h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ns-section-heading p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.ns-heading-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 19px;
+}
+
+.ns-search-form {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ns-search-input-wrap {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.ns-search-input-wrap:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.ns-search-input-wrap > span {
+  margin-right: 9px;
+  color: #94a3b8;
+  font-size: 17px;
+}
+
+.ns-search-input-wrap input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #172b4d;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.ns-search-input-wrap input::placeholder {
+  color: #94a3b8;
+}
+
+/* =========================================
+   SEARCH RESULTS
+========================================= */
+
+.ns-results {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.ns-results h3 {
+  margin: 0 0 12px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.ns-result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 5px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.ns-result-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ns-result-row strong {
+  color: #172b4d;
+  font-size: 14px;
+}
+
+.ns-result-row span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =========================================
+   CART AND SUMMARY - DESKTOP GRID
+========================================= */
+
+.ns-main-grid {
+  display: grid !important;
+
+  /* Cart gets remaining space; summary gets 310px */
+  grid-template-columns: minmax(0, 1fr) 310px !important;
+
+  align-items: start;
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* Cart card */
+
+.ns-cart-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* Cart heading */
+
+.ns-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.ns-card-heading .ns-section-heading h2 {
+  font-size: 18px;
+}
+
+/* =========================================
+   EMPTY CART
+========================================= */
+
+.ns-empty-cart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 170px;
+  padding: 25px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 9px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.ns-empty-cart > span {
+  font-size: 30px;
+}
+
+.ns-empty-cart h3 {
+  margin: 12px 0 6px;
+  color: #334155;
+  font-size: 15px;
+}
+
+.ns-empty-cart p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================
+   CART TABLE
+========================================= */
+
+.ns-table-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.ns-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.ns-table thead {
+  background: #f8fafc;
+}
+
+.ns-table th {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ns-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.ns-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.ns-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ns-medicine-name {
+  color: #172b4d;
+  font-weight: 700;
+  white-space: normal;
+}
+
+.ns-medicine-generic {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 11px;
+  white-space: normal;
+}
+
+.ns-stock-badge {
+  display: inline-flex;
+  margin-top: 7px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ns-quantity-input {
+  width: 75px;
+  height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  color: #172b4d;
+  font-size: 13px;
+  text-align: center;
+}
+
+.ns-quantity-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.ns-line-total {
+  color: #172b4d !important;
+  font-weight: 700;
+}
+
+/* =========================================
+   CUSTOMER DETAILS
+========================================= */
+
+.ns-customer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.ns-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ns-field > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.ns-field > span b {
+  color: #2563eb;
+  font-size: 15px;
+}
+
+.ns-field input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #172b4d;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.ns-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.ns-customer-field {
+  width: 100%;
+}
+
+.ns-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+/* =========================================
+   FEFO INFORMATION
+========================================= */
+
+.ns-fefo-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin-top: 17px;
+  padding: 13px 15px;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+  background: #eff6ff;
+}
+
+.ns-fefo-note > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.ns-fefo-note p {
+  margin: 0;
+  color: #1e40af;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BILL SUMMARY
+========================================= */
+
+.ns-summary-card {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+  position: sticky;
+  top: 15px;
+}
+
+.ns-summary-heading {
+  display: flex !important;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ns-summary-heading h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Each summary row */
+
+.ns-summary-line {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between !important;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+  padding: 12px 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ns-summary-line span {
+  color: #64748b;
+}
+
+.ns-summary-line strong {
+  color: #172b4d;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ns-summary-line .ns-discount-value {
+  color: #16a34a;
+}
+
+/* Final total */
+
+.ns-summary-total {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between !important;
+  gap: 10px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 17px 0;
+  border-top: 1px solid #e2e8f0;
+  color: #172b4d;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.ns-summary-total strong {
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Complete sale */
+
+.ns-complete-button {
+  display: flex;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 15px;
+  padding: 11px 15px;
+  border: 1px solid #16a34a;
+  border-radius: 8px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.ns-complete-button:hover:not(:disabled) {
+  border-color: #15803d;
+  background: #15803d;
+}
+
+.ns-complete-button:disabled {
+  border-color: #94a3b8;
+  background: #94a3b8;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ns-summary-footnote {
+  margin: 13px 0 0;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+   Collapse only below 900px
+========================================= */
+
+@media (max-width: 900px) {
+  .ns-main-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .ns-summary-card {
+    position: static;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .ns-page {
+    padding: 4px 0;
+  }
+
+  .ns-page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .ns-page-heading h1 {
+    font-size: 24px;
+  }
+
+  .ns-page-heading p {
+    font-size: 13px;
+  }
+
+  .ns-search-card,
+  .ns-cart-card,
+  .ns-summary-card {
+    padding: 15px;
+  }
+
+  .ns-search-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ns-search-input-wrap,
+  .ns-primary-button {
+    width: 100%;
+  }
+
+  .ns-card-heading {
+    align-items: flex-start;
+  }
+
+  .ns-field-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .ns-summary-total strong {
+    font-size: 20px;
+  }
+
+  .ns-result-row {
+    align-items: flex-start;
+  }
+}

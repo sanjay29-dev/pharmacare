@@ -1,0 +1,442 @@
+
+/* =========================================
+   PHARMACARE - EXPIRY MANAGEMENT PAGE
+========================================= */
+
+/* Main page */
+
+.expiry-page {
+  width: 100%;
+  min-width: 0;
+  color: #172b4d;
+}
+
+/* Page heading */
+
+.expiry-page .ns-page-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.expiry-page .ns-breadcrumb {
+  margin-bottom: 16px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.expiry-page .ns-page-heading h1 {
+  margin: 0 0 9px;
+  color: #172b4d;
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.expiry-page .ns-page-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Refresh button */
+
+.expiry-page .ns-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expiry-page .ns-secondary-button:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.expiry-page .ns-secondary-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Success and error alerts */
+
+.expiry-page .ns-alert {
+  margin-bottom: 16px;
+  padding: 13px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.expiry-page .ns-alert-error {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.expiry-page .ns-alert-success {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* Expiry tabs */
+
+.expiry-page .expiry-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 7px;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #ffffff;
+}
+
+.expiry-page .expiry-tabs button {
+  min-height: 40px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expiry-page .expiry-tabs button:hover {
+  background: #f1f5f9;
+  color: #1e40af;
+}
+
+.expiry-page .expiry-tabs button.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 3px 9px rgba(37, 99, 235, 0.18);
+}
+
+/* Expiry period selector */
+
+.expiry-page .expiry-period {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 15px 18px;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #eff6ff;
+}
+
+.expiry-page .expiry-period label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.expiry-page .expiry-period select {
+  min-height: 40px;
+  min-width: 130px;
+  padding: 7px 12px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #1e3a8a;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.expiry-page .expiry-period select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Expiry table card */
+
+.expiry-page .expiry-table-card {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* Table heading */
+
+.expiry-page .sh-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 19px 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.expiry-page .sh-table-heading h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.expiry-page .sh-table-heading span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Table horizontal scrolling */
+
+.expiry-page .sh-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Actual expiry table */
+
+.expiry-page .sh-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.expiry-page .sh-table thead {
+  background: #f8fafc;
+}
+
+.expiry-page .sh-table th {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.expiry-page .sh-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.expiry-page .sh-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.expiry-page .sh-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.expiry-page .sh-table td strong {
+  color: #172b4d;
+  font-weight: 650;
+}
+
+/* Expiry status badges */
+
+.expiry-page .expiry-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.expiry-page .expiry-expired {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.expiry-page .expiry-expires_today,
+.expiry-page .expiry-expiring_soon {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.expiry-page .expiry-good {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* Write-off button */
+
+.expiry-page .expiry-writeoff-button {
+  padding: 8px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.expiry-page .expiry-writeoff-button:hover {
+  border-color: #f87171;
+  background: #fee2e2;
+}
+
+.expiry-page .expiry-writeoff-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Loading state */
+
+.expiry-page .sh-empty {
+  padding: 35px 16px;
+  color: #64748b;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Empty state */
+
+.expiry-page .expiry-empty {
+  padding: 45px 16px;
+  text-align: center;
+}
+
+.expiry-page .expiry-empty > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 23px;
+}
+
+.expiry-page .expiry-empty h3 {
+  margin: 12px 0 6px;
+  color: #172b4d;
+  font-size: 16px;
+}
+
+.expiry-page .expiry-empty p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Stock safety information */
+
+.expiry-page .expiry-info {
+  margin-top: 18px;
+  padding: 15px 17px;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1e40af;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.expiry-page .expiry-info strong {
+  font-weight: 750;
+}
+
+/* =========================================
+   EXPIRY PAGE - TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .expiry-page .ns-page-heading h1 {
+    font-size: 25px;
+  }
+
+  .expiry-page .sh-table-heading {
+    padding: 16px;
+  }
+
+  .expiry-page .sh-table-heading h2 {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   EXPIRY PAGE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .expiry-page .ns-page-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .expiry-page .ns-page-heading h1 {
+    font-size: 23px;
+  }
+
+  .expiry-page .ns-secondary-button {
+    align-self: flex-start;
+  }
+
+  .expiry-page .expiry-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .expiry-page .expiry-tabs button {
+    text-align: left;
+  }
+
+  .expiry-page .expiry-period {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .expiry-page .expiry-period select {
+    width: 100%;
+  }
+
+  .expiry-page .sh-table-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .expiry-page .expiry-info {
+    font-size: 12px;
+  }
+}

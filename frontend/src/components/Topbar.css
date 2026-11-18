@@ -1,0 +1,261 @@
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0 20px;
+  overflow: hidden;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.topbar-brand {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.topbar-brand h1 {
+  margin: 0;
+  color: #172554;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-brand p {
+  margin: 1px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-actions {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 0;
+  margin-left: auto;
+}
+
+.notification-button {
+  display: flex;
+  flex: 0 0 36px;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dce5ef;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 16px;
+}
+
+.user-placeholder {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.user-avatar {
+  display: flex;
+  flex: 0 0 36px;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #dce5ef;
+  color: #24364b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-details {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  max-width: 110px;
+}
+
+.user-details strong,
+.user-details span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.user-details strong {
+  color: #172033;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.user-details span {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.topbar .logout-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 6px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.topbar .logout-button:hover {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.menu-toggle {
+  display: none;
+  flex: 0 0 36px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 7px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #172033;
+}
+
+/* Smaller desktop and tablet screens */
+@media (max-width: 1024px) {
+  .topbar {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .topbar-actions {
+    gap: 8px;
+  }
+
+  .topbar-brand h1 {
+    font-size: 16px;
+  }
+
+  .user-details {
+    max-width: 85px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .topbar-brand h1 {
+    font-size: 14px;
+  }
+
+  .topbar-brand p {
+    display: none;
+  }
+
+  .topbar-actions {
+    gap: 7px;
+  }
+
+  .user-details {
+    display: none;
+  }
+
+  .notification-button {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    gap: 6px;
+    padding: 0 8px;
+  }
+
+  .topbar-brand h1 {
+    font-size: 12px;
+  }
+
+  .topbar-actions {
+    gap: 5px;
+  }
+
+  .topbar .logout-button {
+    min-height: 30px;
+    padding: 5px 7px;
+    font-size: 11px;
+  }
+}
+
+/* Topbar width and alignment correction */
+.topbar {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.topbar-brand {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.topbar-actions {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 0;
+  margin-left: 8px;
+  gap: 10px;
+}
+
+.user-placeholder {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.topbar .logout-button {
+  flex-shrink: 0;
+}
